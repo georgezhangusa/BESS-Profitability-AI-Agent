@@ -1,0 +1,8 @@
+{
+  "name": "BESS Profitability AI Agent - Multi Language",
+  "description": "BESS operations manager platform for energy arbitrage, 5-year predictive market forecasting across CAISO, ERCOT, and PJM, non-linear LFP battery degradation modeling, and co-optimized dispatch scheduling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
