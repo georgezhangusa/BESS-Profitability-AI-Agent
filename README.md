@@ -1,0 +1,1 @@
+Autonomous dispatch simulation engine evaluating energy arbitrage, ancillary service revenues, and auxiliary parasitic loads across CAISO and ERCOT wholesale market structures to support project underwriting.
