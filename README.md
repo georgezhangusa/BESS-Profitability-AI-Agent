@@ -1,1 +1,2 @@
 Autonomous dispatch simulation engine evaluating energy arbitrage, ancillary service revenues, and auxiliary parasitic loads across CAISO and ERCOT wholesale market structures to support project underwriting.
+Note: It is a demo program. If you are interested in turning it into a useful application, we can work together to make it happen. Please contact the author, George Zhang, by email: z_george@yahoo.com or reach me on LinkedIn: georgezhangusa
