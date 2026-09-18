@@ -1,2 +1,4 @@
-Autonomous dispatch simulation engine evaluating energy arbitrage, ancillary service revenues, and auxiliary parasitic loads across CAISO and ERCOT wholesale market structures to support project underwriting.
-Note: It is a demo program. If you are interested in turning it into a useful application, we can work together to make it happen. Please contact the author, George Zhang, by email: z_george@yahoo.com or reach me on LinkedIn: georgezhangusa
+A BESS profitability AI agent for energy arbitrage and ancillary service revenues across independent electricity wholesale market operators such as CAISO and ERCOT.
+
+This is a conceptual demonstration. If you think it could become a useful application, we can collaborate to make it happen.
+Please get in touch with the author, George Zhang, by email: z_george@yahoo.com or reach me on LinkedIn: georgezhangusa
