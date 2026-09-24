@@ -7,6 +7,7 @@ export interface TranslationDict {
   appDeveloper: string;
   scadaOnline: string;
   liveScada: string;
+  readme: string;
   languageSelect: string;
 
   // Common / General
@@ -433,6 +434,7 @@ export const translations: Record<Language, TranslationDict> = {
     appDeveloper: 'Developer: George Zhang',
     scadaOnline: 'SCADA Online',
     liveScada: 'Live SCADA',
+    readme: 'README',
     languageSelect: 'Language',
 
     // Common / General
@@ -866,6 +868,7 @@ export const translations: Record<Language, TranslationDict> = {
     appDeveloper: '开发者：George Zhang',
     scadaOnline: 'SCADA 在线',
     liveScada: '实时 SCADA 遥测',
+    readme: '项目说明 (README)',
     languageSelect: '语言',
 
     // Common / General
@@ -1299,6 +1302,7 @@ export const translations: Record<Language, TranslationDict> = {
     appDeveloper: 'Développeur : George Zhang',
     scadaOnline: 'SCADA En Ligne',
     liveScada: 'SCADA Direct',
+    readme: 'README',
     languageSelect: 'Langue',
 
     // Common / General

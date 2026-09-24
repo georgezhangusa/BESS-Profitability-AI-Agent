@@ -8,6 +8,7 @@ import { RevenueWaterfall } from './components/RevenueWaterfall';
 import { AiAdvisorCard } from './components/AiAdvisorCard';
 import { FeatureGapAnalysis } from './components/FeatureGapAnalysis';
 import { LiveTelemetryModal } from './components/LiveTelemetryModal';
+import { ReadmeModal } from './components/ReadmeModal';
 import { OperationsOverviewHeader } from './components/OperationsOverviewHeader';
 import { useLanguage } from './i18n/LanguageContext';
 import {
@@ -71,6 +72,7 @@ export function App() {
   const [activeTab, setActiveTab] = useState<'overview' | 'forecast' | 'dispatch' | 'degradation' | 'gap-analysis'>('overview');
   const [isTelemetryOpen, setIsTelemetryOpen] = useState<boolean>(false);
   const [isGapAnalysisOpen, setIsGapAnalysisOpen] = useState<boolean>(false);
+  const [isReadmeOpen, setIsReadmeOpen] = useState<boolean>(false);
 
   // Active pricing node details
   const activeNode = useMemo(() => {
@@ -192,6 +194,7 @@ export function App() {
         inverterMW={bessConfig.inverterMW}
         onOpenTelemetry={() => setIsTelemetryOpen(true)}
         onOpenGapAnalysis={() => setIsGapAnalysisOpen(true)}
+        onOpenReadme={() => setIsReadmeOpen(true)}
       />
 
       {/* Main App Body */}
@@ -394,6 +397,12 @@ export function App() {
         nodeName={activeNode.name}
       />
 
+      {/* README & Contact Modal */}
+      <ReadmeModal
+        isOpen={isReadmeOpen}
+        onClose={() => setIsReadmeOpen(false)}
+      />
+
       {/* Footer */}
       <footer className="bg-white border-t border-slate-200 text-slate-600 py-4 mt-12 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-3">
@@ -402,6 +411,12 @@ export function App() {
             <span>•</span>
             <span className="text-slate-800 font-semibold">{t.appDeveloper}</span>
           </div>
+          <button
+            onClick={() => setIsReadmeOpen(true)}
+            className="text-xs font-semibold text-blue-600 hover:text-blue-800 hover:underline cursor-pointer flex items-center gap-1"
+          >
+            <span>{t.readme || 'README'}</span>
+          </button>
         </div>
       </footer>
     </div>

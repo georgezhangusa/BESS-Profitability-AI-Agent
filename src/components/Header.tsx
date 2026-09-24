@@ -1,5 +1,5 @@
 import React from 'react';
-import { BatteryCharging, Activity, Zap } from 'lucide-react';
+import { BatteryCharging, Activity, Zap, BookOpen } from 'lucide-react';
 import { ISOType, BESSCapacity } from '../types';
 import { useLanguage } from '../i18n/LanguageContext';
 import { LanguageSelector } from './LanguageSelector';
@@ -11,6 +11,7 @@ interface HeaderProps {
   inverterMW: number;
   onOpenTelemetry: () => void;
   onOpenGapAnalysis?: () => void;
+  onOpenReadme?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -18,6 +19,7 @@ export const Header: React.FC<HeaderProps> = ({
   capacityMWh,
   inverterMW,
   onOpenTelemetry,
+  onOpenReadme,
 }) => {
   const { t } = useLanguage();
 
@@ -75,6 +77,17 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Activity className="w-3.5 h-3.5 text-blue-600" />
             <span>{t.liveScada}</span>
+          </button>
+
+          {/* README Button */}
+          <button
+            id="open-readme-btn"
+            onClick={onOpenReadme}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 border border-blue-500 text-xs font-bold text-white shadow-[0_4px_0_0_#1d4ed8] hover:shadow-[0_4px_0_0_#1e40af] active:shadow-[0_1px_0_0_#1d4ed8] active:translate-y-[3px] transition-all cursor-pointer select-none"
+            title="README.md - Project Overview & Contact"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-blue-100" />
+            <span>{t.readme || 'README'}</span>
           </button>
         </div>
       </div>
